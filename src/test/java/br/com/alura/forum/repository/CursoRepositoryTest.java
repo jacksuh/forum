@@ -26,5 +26,12 @@ public class CursoRepositoryTest {
 		Assert.assertNotNull(curso);
 		Assert.assertEquals(nomeCurso, curso.getNome());
 	}
+	
+	@Test
+	public void NaoCarregarCurso() {
+		String nomeCurso ="JPA";
+		Curso curso = repository.findByNome(nomeCurso);
+		Assert.assertNotNull(curso);
+	}
 
 }
